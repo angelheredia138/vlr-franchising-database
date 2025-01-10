@@ -84,14 +84,7 @@ import vctPacific from "@/assets/vct-pacific-png.png";
 
 export default {
   name: "Home",
-  mounted() {
-    // Add class to disable scrolling when this page is mounted
-    document.body.classList.add("disable-scroll");
-  },
-  unmounted() {
-    // Remove class to re-enable scrolling when leaving this page
-    document.body.classList.remove("disable-scroll");
-  },
+
   data() {
     return {
       dropdownVisible: false,
