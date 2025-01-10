@@ -23,7 +23,20 @@
         }
       })(window.location);
     </script>
-    <script type="module" crossorigin src="/vlr-franchising-database/assets/index-CzDzX8uz.js"></script>
+    <script type="text/javascript">
+      (function () {
+        const redirect = window.location.pathname
+          .replace("/vlr-franchising-database", "")
+          .replace(/\/$/, "");
+        if (redirect)
+          window.history.replaceState(
+            {},
+            document.title,
+            "/vlr-franchising-database" + redirect
+          );
+      })();
+    </script>
+    <script type="module" crossorigin src="/vlr-franchising-database/assets/index-C4U5z8hQ.js"></script>
     <link rel="stylesheet" crossorigin href="/vlr-franchising-database/assets/index-DkgHMFsp.css">
   </head>
   <body>
