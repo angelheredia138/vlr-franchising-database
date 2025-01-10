@@ -1,4 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+} from "vue-router";
 import Home from "./views/Home.vue";
 import RegionPage from "./views/RegionPage.vue";
 import TeamPage from "./views/TeamPage.vue";
@@ -21,7 +25,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory("/vlr-franchising-database/"),
   routes,
   scrollBehavior(to, from, savedPosition) {
     // Scroll to the top of the page on every navigation

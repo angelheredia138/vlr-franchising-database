@@ -12,7 +12,7 @@ library.add(faTwitter, faTwitch, faLink);
 const app = createApp(App);
 app.use(VueLazyload, {
   preLoad: 1.3,
-  loading: "/src/assets/loading-placeholder.png", // Placeholder image
+  loading: "../../assets/loading-placeholder.png", // Placeholder image
   attempt: 1,
 });
 app.use(router);
