@@ -73,9 +73,11 @@ import vctPacific from "@/assets/vct-pacific-png.png";
 
 export default {
   name: "RegionPage",
+
   components: {
     Loading,
   },
+
   data() {
     return {
       teams: [],
@@ -387,5 +389,58 @@ export default {
   display: inline-block;
   transform: rotate(180deg);
   transition: transform 0.3s ease;
+}
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+  .header-logo {
+    width: 100px;
+    margin-bottom: 0rem;
+  }
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+  }
+
+  .team-name {
+    font-size: 0.7rem;
+  }
+
+  .back-button {
+    font-size: 0.6rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .dropdown-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .dropdown-item {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust team cards for smaller screens */
+  .teams-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 1rem; /* Smaller gap for mobile */
+    justify-items: center; /* Center cards horizontally */
+  }
+
+  .team-card {
+    width: 75px; /* Shrink width of team cards */
+    padding: 0.5rem; /* Reduce padding */
+  }
+  .team-card:hover {
+    transform: scale(0.96);
+  }
+
+  .team-logo {
+    width: 50px; /* Shrink logo */
+    height: 50px;
+  }
 }
 </style>

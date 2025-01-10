@@ -589,7 +589,7 @@ ul li {
 }
 
 .winnings-card {
-  background-color: #5d6085; /* Same as other card sections */
+  background-color: #3a3a4d; /* Same as other card sections */
   padding: 1.5rem;
   border-radius: 10px;
   text-align: center; /* Center content for this section */
@@ -611,11 +611,7 @@ ul li {
   font-size: 2rem;
   font-weight: bold;
   color: #ffffff; /* Standout text color */
-  background: linear-gradient(
-    90deg,
-    #ff4655,
-    #7b5cff
-  ); /* Eye-catching gradient */
+  background: linear-gradient(90deg, #b8860b, #ffd700, #fffacd, #b8860b);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -716,5 +712,174 @@ ul li {
   display: inline-block;
   transform: rotate(180deg);
   transition: transform 0.3s ease;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Adjust Page Padding */
+  .player-page {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  /* Back Button */
+  .back-button {
+    font-size: 0.8rem; /* Reduce font size */
+    padding: 0.4rem 1rem; /* Adjust padding */
+  }
+
+  /* Player Overview */
+  .player-overview {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 1rem; /* Reduce spacing */
+    align-items: center; /* Center align for smaller screens */
+  }
+
+  .player-profile {
+    width: 100px; /* Shrink profile image size */
+    height: 100px;
+  }
+
+  .player-username {
+    font-size: 1.2rem; /* Reduce font size */
+    text-align: center; /* Center align username */
+  }
+
+  .player-realname {
+    font-size: 0.9rem; /* Adjust real name font size */
+    text-align: center; /* Center align username */
+  }
+
+  /* Center Flag and Social Media Links */
+  .player-country-social {
+    display: flex;
+    flex-direction: column; /* Stack flag and social media links vertically */
+    align-items: center; /* Center align both flag and links */
+    gap: 0.5rem; /* Add spacing between flag and social media links */
+  }
+
+  .player-country {
+    display: flex;
+    justify-content: center; /* Center flag horizontally */
+    align-items: center;
+  }
+
+  .social-media-links {
+    display: flex;
+    justify-content: center; /* Center social media links */
+    gap: 1rem; /* Add spacing between icons */
+  }
+
+  .social-media-link {
+    font-size: 1.5rem; /* Default icon size */
+    color: #ffffff; /* Default icon color */
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .social-media-link:hover {
+    color: #ff4655; /* Change color on hover */
+    transform: scale(1.2); /* Slight growth on hover */
+  }
+
+  /* Current Team */
+  .current-team {
+    flex-direction: column; /* Stack team details vertically */
+    align-items: center;
+    text-align: center; /* Center align content */
+    gap: 0.5rem; /* Reduce spacing */
+  }
+
+  .team-logo {
+    width: 40px; /* Shrink team logo */
+    height: 40px;
+  }
+
+  /* Details Cards (Past Teams, Last Matches, Top Agents) */
+  .details-card {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .teams-container,
+  .matches-container,
+  .agents-container {
+    gap: 1rem; /* Reduce gaps */
+  }
+
+  .team-card,
+  .match-card,
+  .agent-card {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .past-teams-logo,
+  .match-logo,
+  .agent-image {
+    width: 40px; /* Shrink images */
+    height: 40px;
+  }
+  .team-details {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+  .team-logo-wrapper {
+    background-color: #5d6085;
+    padding: 5px;
+    display: flex; /* Change from inline-block to flex */
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center the logo vertically */
+    border-radius: 8px;
+  }
+
+  .team-card {
+    display: flex;
+    flex-direction: column; /* Stack the logo and team details vertically */
+    align-items: center; /* Center all content horizontally */
+    background-color: #5d6085;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center-align the text in the card */
+  }
+
+  .team-name,
+  .event-name {
+    font-size: 0.75rem; /* Adjust font sizes */
+  }
+
+  .vs-text {
+    font-size: 1rem; /* Adjust size for 'vs' text */
+    margin: 0.5rem 0; /* Add spacing */
+  }
+
+  .match-result,
+  .match-date,
+  .agent-stats p {
+    text-align: center; /* Center align username */
+    font-size: 0.7rem; /* Adjust additional info size */
+  }
+
+  .agent-stats {
+    font-size: 0.8rem; /* Adjust agent stats size */
+  }
+
+  /* Total Winnings */
+  .winnings-card {
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .winnings-title {
+    font-size: 1rem; /* Adjust title size */
+  }
+
+  .winnings-amount {
+    font-size: 1.5rem; /* Adjust winnings size */
+  }
+
+  /* Disclaimer */
+  .smaller-description {
+    font-size: 0.75rem; /* Reduce text size */
+    margin-top: 1rem; /* Adjust spacing */
+  }
 }
 </style>

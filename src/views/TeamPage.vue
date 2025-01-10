@@ -386,12 +386,6 @@ export default {
   height: 30px;
 }
 
-.team-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #ff4655;
-}
-
 .team-socials {
   margin-top: 1rem;
   display: flex;
@@ -503,5 +497,97 @@ export default {
   display: inline-block;
   transform: rotate(180deg);
   transition: transform 0.3s ease;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .player-card:hover {
+    transform: scale(0.96);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  /* Adjust Page Padding */
+  .team-page {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  /* Team Title */
+  .team-title {
+    font-size: 1rem; /* Reduce font size */
+    margin-bottom: 0.5rem;
+  }
+
+  /* Subtitle */
+  .subtitle {
+    font-size: 0.75rem; /* Smaller text for better fit */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Back Button */
+  .back-button {
+    font-size: 0.8rem; /* Reduce font size */
+    padding: 0.4rem 1rem; /* Adjust padding */
+  }
+
+  /* Players Container */
+  .players-container {
+    display: grid;
+    gap: 1rem; /* Reduce gap between cards */
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for player cards */
+  }
+
+  /* Player Card */
+  .player-card {
+    width: 90px; /* Shrink card width */
+    padding: 0.5rem; /* Adjust padding */
+    font-size: 0.8rem; /* Adjust font size */
+  }
+
+  /* Player Profile Image */
+  .player-profile-wrapper {
+    width: 80px; /* Shrink profile image size */
+    height: 80px;
+  }
+
+  .player-profile,
+  .player-silhouette {
+    width: 100%; /* Ensure images fit the wrapper */
+    height: 100%;
+  }
+
+  /* Player Name and Info */
+  .player-name {
+    font-size: 0.75rem; /* Adjust name size */
+  }
+
+  .player-role,
+  .player-realname,
+  .player-empty-role {
+    font-size: 0.6rem; /* Adjust additional info size */
+  }
+  .flag-icon {
+    width: 13px;
+    height: 9px;
+    border-radius: 2px;
+  }
+  /* Team Social Links */
+  .team-socials {
+    gap: 0.5rem; /* Reduce spacing between social icons */
+  }
+
+  .team-social-link {
+    font-size: 1.2rem; /* Reduce icon size */
+  }
+
+  /* Dropdown Button */
+  .dropdown-button {
+    font-size: 0.9rem; /* Adjust font size */
+    padding: 0.4rem 0.8rem; /* Adjust padding */
+  }
+
+  /* Disclaimer */
+  .smaller-description {
+    font-size: 0.8rem; /* Smaller disclaimer text */
+    margin-top: 1rem; /* Reduce spacing above */
+  }
 }
 </style>

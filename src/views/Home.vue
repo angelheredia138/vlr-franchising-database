@@ -60,7 +60,7 @@
       </router-link>
     </div>
 
-    <p class="smaller-description">
+    <p class="smallest-description">
       note: all data is received from vlr.gg and is not associated with vlr.gg
       nor VALORANT. all of the teams' info were received from each region's
       respective 2025 KICKOFF tournament. if you encounter any bugs, contact the
@@ -70,7 +70,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        his website </a
+        his website</a
       >.
     </p>
   </div>
@@ -171,7 +171,7 @@ export default {
   max-width: 600px;
   line-height: 1.6;
 }
-
+.smallest-description,
 .smaller-description {
   font-size: 0.9rem;
   margin-bottom: 2rem;
@@ -322,5 +322,64 @@ export default {
   display: inline-block;
   transform: rotate(180deg);
   transition: transform 0.3s ease;
+}
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  /* Container styling */
+  .home-container {
+    padding: 0rem;
+  }
+  /* Make all text smaller */
+  .title {
+    font-size: 1.25rem;
+  }
+  .valorant-font {
+    font-size: 1.25rem;
+  }
+  .subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 0rem;
+  }
+
+  .description,
+  .smaller-description {
+    font-size: 0.65rem;
+    margin-bottom: 0rem;
+  }
+  .smallest-description {
+    font-size: 0.6rem;
+    margin-bottom: 0rem;
+  }
+  .region-label {
+    font-size: 1rem;
+  }
+
+  .dropdown-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .dropdown-item {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust region buttons to a 2x2 grid */
+  .region-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+    justify-items: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+  }
+
+  /* Make region buttons smaller */
+  .region {
+    transform: scale(0.8);
+  }
+
+  .region-icon {
+    width: 75px;
+    height: 75px;
+  }
 }
 </style>
