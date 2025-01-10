@@ -25,7 +25,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory("/vlr-franchising-database/"),
+  history: createWebHistory("/vlr-franchising-database/"),
   routes,
   scrollBehavior(to, from, savedPosition) {
     // Scroll to the top of the page on every navigation

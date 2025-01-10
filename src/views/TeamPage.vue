@@ -137,7 +137,7 @@
 
 <script>
 import axios from "axios";
-import playerPlaceholder from "../assets/player-placeholder.png";
+import playerPlaceholder from "@/assets/player-placeholder.png";
 import Loading from "@/components/Loading.vue";
 
 export default {
@@ -207,10 +207,9 @@ export default {
 </script>
 
 <style scoped>
-/* Import Valorant font */
 @font-face {
   font-family: "ValorantFont";
-  src: url("/Valorant Font.ttf") format("truetype");
+  src: url("@/assets/Valorant Font.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -370,6 +369,7 @@ export default {
   font-size: 1.2rem;
   color: #ff4655;
 }
+
 .team-info {
   margin-bottom: 2rem;
 }
@@ -410,6 +410,7 @@ export default {
   transform: scale(1.1);
 }
 
+/* Dropdown Menu */
 .dropdown-container {
   position: fixed;
   top: 1rem;
@@ -474,6 +475,7 @@ export default {
 .dropdown-item:last-child {
   border-bottom: none;
 }
+
 .dropdown-enter-active,
 .dropdown-leave-active {
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -490,6 +492,7 @@ export default {
   opacity: 1;
   transform: translateY(0);
 }
+
 .icon-default {
   display: inline-block;
   transform: rotate(0deg);

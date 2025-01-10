@@ -40,38 +40,26 @@
 
     <div class="region-icons">
       <router-link to="/region/americas" class="region">
-        <img
-          src="/src/assets/vct-americas-png.png"
-          alt="Americas"
-          class="region-icon"
-        />
+        <img :src="vctAmericas" alt="Americas" class="region-icon" />
         <p class="region-label">AMERICAS</p>
       </router-link>
+
       <router-link to="/region/emea" class="region">
-        <img
-          src="/src/assets/vct-emea-png.png"
-          alt="EMEA"
-          class="region-icon"
-        />
+        <img :src="vctEmea" alt="EMEA" class="region-icon" />
         <p class="region-label">EMEA</p>
       </router-link>
+
       <router-link to="/region/china" class="region">
-        <img
-          src="/src/assets/vct-china-png.png"
-          alt="China"
-          class="region-icon"
-        />
+        <img :src="vctChina" alt="China" class="region-icon" />
         <p class="region-label">CHINA</p>
       </router-link>
+
       <router-link to="/region/pacific" class="region">
-        <img
-          src="/src/assets/vct-pacific-png.png"
-          alt="Pacific"
-          class="region-icon"
-        />
+        <img :src="vctPacific" alt="Pacific" class="region-icon" />
         <p class="region-label">PACIFIC</p>
       </router-link>
     </div>
+
     <p class="smaller-description">
       note: all data is received from vlr.gg and is not associated with vlr.gg
       nor VALORANT. all of the teams' info were received from each region's
@@ -82,13 +70,18 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        his website</a
+        his website </a
       >.
     </p>
   </div>
 </template>
 
 <script>
+import vctAmericas from "@/assets/vct-americas-png.png";
+import vctEmea from "@/assets/vct-emea-png.png";
+import vctChina from "@/assets/vct-china-png.png";
+import vctPacific from "@/assets/vct-pacific-png.png";
+
 export default {
   name: "Home",
   mounted() {
@@ -102,6 +95,11 @@ export default {
   data() {
     return {
       dropdownVisible: false,
+      // Image references imported above
+      vctAmericas,
+      vctEmea,
+      vctChina,
+      vctPacific,
     };
   },
   computed: {
@@ -118,10 +116,9 @@ export default {
 </script>
 
 <style scoped>
-/* Import the Valorant font */
 @font-face {
   font-family: "ValorantFont";
-  src: url("/Valorant Font.ttf") format("truetype");
+  src: url("@/assets/Valorant Font.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -232,6 +229,7 @@ export default {
   text-transform: uppercase;
 }
 
+/* Dropdown Container */
 .dropdown-container {
   position: fixed;
   top: 1rem;
@@ -296,6 +294,7 @@ export default {
 .dropdown-item:last-child {
   border-bottom: none;
 }
+
 .dropdown-enter-active,
 .dropdown-leave-active {
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -312,6 +311,7 @@ export default {
   opacity: 1;
   transform: translateY(0);
 }
+
 .icon-default {
   display: inline-block;
   transform: rotate(0deg);

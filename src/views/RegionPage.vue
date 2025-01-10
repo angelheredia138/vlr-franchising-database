@@ -65,6 +65,12 @@
 import axios from "axios";
 import Loading from "@/components/Loading.vue";
 
+// Import assets for each region
+import vctAmericas from "@/assets/vct-americas-png.png";
+import vctEmea from "@/assets/vct-emea-png.png";
+import vctChina from "@/assets/vct-china-png.png";
+import vctPacific from "@/assets/vct-pacific-png.png";
+
 export default {
   name: "RegionPage",
   components: {
@@ -99,22 +105,23 @@ export default {
       this.$router.back();
     },
     setRegionData() {
+      // Here we use the imported assets instead of hard-coded paths
       const regionMap = {
         americas: {
           name: "Americas",
-          logo: "/src/assets/vct-americas-png.png",
+          logo: vctAmericas,
         },
         emea: {
           name: "EMEA",
-          logo: "/src/assets/vct-emea-png.png",
+          logo: vctEmea,
         },
         china: {
           name: "China",
-          logo: "/src/assets/vct-china-png.png",
+          logo: vctChina,
         },
         pacific: {
           name: "Pacific",
-          logo: "/src/assets/vct-pacific-png.png",
+          logo: vctPacific,
         },
       };
 
@@ -266,6 +273,7 @@ export default {
   font-family: "ValorantFont", sans-serif;
   font-weight: bold;
 }
+
 .back-button {
   display: inline-block;
   margin-bottom: 2rem;
@@ -351,6 +359,7 @@ export default {
 .dropdown-item:last-child {
   border-bottom: none;
 }
+
 .dropdown-enter-active,
 .dropdown-leave-active {
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -367,6 +376,7 @@ export default {
   opacity: 1;
   transform: translateY(0);
 }
+
 .icon-default {
   display: inline-block;
   transform: rotate(0deg);

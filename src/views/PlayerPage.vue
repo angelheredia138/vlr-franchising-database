@@ -46,7 +46,7 @@
           />
           <img
             v-else
-            src="../assets/player-placeholder.png"
+            :src="playerPlaceholder"
             alt="Player silhouette"
             class="player-profile"
           />
@@ -225,6 +225,8 @@
 <script>
 import axios from "axios";
 import Loading from "@/components/Loading.vue";
+// Import the player placeholder from the assets directory
+import playerPlaceholder from "@/assets/player-placeholder.png";
 
 export default {
   name: "PlayerPage",
@@ -239,6 +241,8 @@ export default {
       loading: true,
       error: null,
       dropdownVisible: false,
+      // We can now reference `playerPlaceholder` in the template
+      playerPlaceholder,
     };
   },
   computed: {
@@ -309,6 +313,13 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "ValorantFont";
+  src: url("@/assets/Valorant Font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .player-page {
   padding: 2rem;
   font-family: Arial, sans-serif;
@@ -332,25 +343,10 @@ export default {
   background-color: #ff6775;
   transform: scale(1.05);
 }
+
 .back-button-container {
   text-align: center; /* Center the button horizontally */
   margin-bottom: 2rem; /* Add space below the button */
-}
-
-.back-button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #ff4655;
-  color: #ffffff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: transform 0.2s ease;
-}
-
-.back-button:hover {
-  background-color: #ff6775;
-  transform: scale(1.05);
 }
 
 .player-overview {
@@ -437,6 +433,7 @@ export default {
   object-fit: cover;
   margin-right: 1rem;
 }
+
 .team-details {
   display: flex;
   flex-direction: column;
@@ -460,6 +457,7 @@ export default {
   flex-grow: 1;
   text-align: right;
 }
+
 .event-name {
   font-size: 1rem;
   font-weight: bold;
@@ -479,6 +477,7 @@ export default {
   margin-bottom: 1rem;
   text-align: left;
 }
+
 .matches-container {
   display: flex;
   flex-direction: column;
@@ -521,6 +520,7 @@ ul li {
   height: 40px;
   border-radius: 5px;
 }
+
 .agents-container {
   display: flex;
   flex-direction: column;
@@ -565,6 +565,7 @@ ul li {
 .agent-stats p {
   margin: 0.2rem 0;
 }
+
 .player-country-social {
   display: flex;
   align-items: center;
@@ -586,6 +587,7 @@ ul li {
   color: #ff4655; /* Hover effect for icons */
   transform: scale(1.2);
 }
+
 .winnings-card {
   background-color: #5d6085; /* Same as other card sections */
   padding: 1.5rem;
@@ -621,6 +623,7 @@ ul li {
   border-radius: 8px;
 }
 
+/* Dropdown Menu */
 .dropdown-container {
   position: fixed;
   top: 1rem;
@@ -685,6 +688,7 @@ ul li {
 .dropdown-item:last-child {
   border-bottom: none;
 }
+
 .dropdown-enter-active,
 .dropdown-leave-active {
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -701,6 +705,7 @@ ul li {
   opacity: 1;
   transform: translateY(0);
 }
+
 .icon-default {
   display: inline-block;
   transform: rotate(0deg);
